@@ -28,15 +28,15 @@ async def start(event):
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
     firstname = replied_user.user.first_name
     vent = event.chat_id
-    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy [➤ Master](tg://user?id={bot.uid}) \nI Can Deliver Message To My Master Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [『Lêɠêɳ̃dẞø†』](https://t.me/Official_LegendBot)"
+    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am Marx, An Powerfull Assistant Bot. \n\nMy Boss Willow \nI Can Deliver Message To My Boss Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [『Lêɠêɳ̃dẞø†』](https://t.me/Official_LegendBot)"
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
             message=f"Hi Sir/Miss, It's Me {bot_id}, Your Assistant ! \nHow Can I help U?",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
-                    Button.url(" Updates ", "https://t.me/Official_LegendBot"),
+                    Button.url(" My Group ", "https://t.me/bakahooman"),
+                    Button.url(" My Group ", "https://t.me/bakahooman"),
                 ],
                 [
                     custom.Button.inline("Users", data="users"),
@@ -56,10 +56,10 @@ async def start(event):
             link_preview=False,
             buttons=[
                 [
-                    custom.Button.inline(" Rules ", data="rules"),
-                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
+                    Button.url(" My Group ", "https://t.me/bakahooman"),
+                    Button.url(" My channel ", "https://t.me/bakahooman"),
                 ],
-                [custom.Button.inline("Deploy Your LegendBot", data="deploy")],
+                [Button.url("My Master", "https://t.me/couplyy")],
             ],
         )
 
